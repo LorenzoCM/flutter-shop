@@ -32,22 +32,21 @@ class MyApp extends StatelessWidget {
               ),
             ),
       ),
-      home: CategoriesScreen(),
       routes: {
         '/': (ctx) => TabsScreen(),
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
         MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
       },
-      // onGenerateRoute: (settings) {
-      //   return MaterialPageRoute(
-      //     builder: (context) => CategoriesScreen(),
-      //   );
-      // },
-      // onUnknownRoute: (settings) {
-      //   return MaterialPageRoute(
-      //     builder: (context) => CategoriesScreen(),
-      //   );
-      // },
+      onGenerateRoute: (settings) {
+        return MaterialPageRoute(
+          builder: (context) => CategoriesScreen(),
+        );
+      },
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(
+          builder: (context) => CategoriesScreen(),
+        );
+      },
     );
   }
 }
